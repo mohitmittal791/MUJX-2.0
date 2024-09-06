@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
-    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/mujx2.0/css/register.css">
 </head>
 <body>
     <div class="container">
@@ -82,41 +82,18 @@
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();  // Prevent the default form submission behavior
             
-            // Prepare form data
+            // Optionally, you can handle form data here if needed
+            // For example, you can use FormData to capture form input values
             const formData = new FormData(this);
-            
-            // Create an XMLHttpRequest object
-            const xhr = new XMLHttpRequest();
-            
-            // Configure it: POST-request for the URL /submit_registration.php
-            xhr.open('POST', '/submit_registration.php', true);
-            
-            // Set up the callback function to handle the response
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    // Check if the response indicates success
-                    if (xhr.responseText === 'Success') {
-                        // Redirect to the quiz page
-                        window.location.href = '/mujx2.0/quiz.html';  // Correct URL path
-                    } else {
-                        // Handle the error case
-                        alert('There was an error with the registration. Please try again.');
-                    }
-                } else {
-                    // Handle network or server error
-                    alert('Network error. Please try again.');
-                }
-            };
-            
-            // Send the form data
-            xhr.send(formData);
+    
+            // Optionally, you can send this data to a server-side script using Fetch API or XMLHttpRequest
+            // For this example, we will assume registration is successful and redirect
+    
+            // Redirect to the quiz page
+            window.location.href = 'http://localhost/index.php';  // Adjust the path as necessary
         });
     </script>
-<<<<<<< HEAD
     
     <script src="/mujx2.0/js/register.js"></script>
-=======
-    <script src="/js/register.js"></script>
->>>>>>> aad3fde880a21f3aaf4e29635d4c3dfcb1ddfcb0
 </body>
 </html>

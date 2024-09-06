@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+// document.getElementById('registrationForm').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Prevent the default form submission behavior
 
-    // Perform any validation or form data processing here if needed
+//     // Perform any validation or form data processing here if needed
 
-    // Redirect to the quiz page after form submission
-    window.location.href = "quiz.html"; // Change this URL to your actual quiz page
-});
+//     // Redirect to the quiz page after form submission
+//     window.location.href = "quiz.html"; // Change this URL to your actual quiz page
+// });
